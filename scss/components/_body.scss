@@ -1,14 +1,18 @@
 @import '../utility/variables';
 
 header {
-    background-color: $primary-color;
+    // background-color: $primary-color;
 }
 
 .header-list {
-    display: inline-block;
-    overflow: hidden;
+    list-style: none;
+    display: flex;
+    width: 50%;
     li {
-        list-style: none;
-        display: inline;
+        width: calc(100% / 3);
     }
+}
+
+.profile-img {
+    border-radius: 50%;
 }
