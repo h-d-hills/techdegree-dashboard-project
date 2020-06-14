@@ -337,8 +337,17 @@ template {
   display: none;
 }
 
+header {
+  background-color: #7477bf;
+}
+
 .header-list {
+  display: inline-block;
+  overflow: hidden;
+}
+.header-list li {
   list-style: none;
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map */
