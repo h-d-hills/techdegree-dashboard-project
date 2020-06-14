@@ -337,16 +337,31 @@ template {
   display: none;
 }
 
-.header-list {
-  list-style: none;
-  display: flex;
-  width: 50%;
-}
-.header-list li {
-  width: calc(100% / 3);
+* {
+  box-sizing: border-box;
 }
 
-.profile-img {
+header {
+  background-color: #7477bf;
+  align-content: center;
+}
+header p {
+  margin: auto;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+header .header-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+header .header-list li {
+  width: calc(100% / 3);
+  margin: auto;
+}
+header .profile-img {
   border-radius: 50%;
 }
 

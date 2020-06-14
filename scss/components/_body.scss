@@ -1,18 +1,29 @@
 @import '../utility/variables';
 
+* {
+    box-sizing: border-box;
+}
+
 header {
-    // background-color: $primary-color;
-}
-
-.header-list {
-    list-style: none;
-    display: flex;
-    width: 50%;
-    li {
-        width: calc(100% / 3);
+    background-color: $primary-color;
+    align-content: center;
+    p {
+        margin: auto;
+        color: white;
+        font-size: 2em;
+        text-align: center;
     }
-}
-
-.profile-img {
-    border-radius: 50%;
+    .header-list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        li {
+            width: calc(100% / 3);
+            margin: auto;
+        }
+    }
+    .profile-img {
+        border-radius: 50%;
+    }
 }
