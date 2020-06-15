@@ -345,7 +345,7 @@ template {
   background-color: #7477bf;
   align-content: center;
   padding-bottom: 0.125em;
-  height: 9em;
+  height: 8em;
 }
 .main-header p {
   margin: auto;
@@ -358,21 +358,27 @@ template {
   list-style: none;
   display: flex;
   width: 100%;
-  margin-top: -1em;
+  margin-top: -1.5em;
 }
 .main-header .header-list .header-item {
-  width: calc(100% / 3);
+  width: 50%;
   margin: auto;
-  text-align: center;
 }
 .main-header .header-list .header-item li {
+  text-align: center;
   transform: scale(0.5);
 }
-.main-header .header-list .header-item li .profile-img {
-  border-radius: 50%;
+.main-header .header-list .header-item li:last-child {
+  text-align: center;
+  display: flex;
 }
-.main-header .header-list .header-item li h3 {
+.main-header .header-list .header-item li:last-child .profile-img {
+  border-radius: 50%;
+  margin-right: 1em;
+}
+.main-header .header-list .header-item li:last-child h3 {
   color: white;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
