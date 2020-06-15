@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 
-header {
+.main-header {
     background-color: $primary-color;
     align-content: center;
+    padding-bottom: 0.125em;
     p {
         margin: auto;
         color: white;
@@ -21,9 +22,13 @@ header {
         li {
             width: calc(100% / 3);
             margin: auto;
+            text-align: center;
+            .profile-img {
+                border-radius: 50%;
+            }
+            svg {
+                border-right: 1px solid black;
+            }
         }
-    }
-    .profile-img {
-        border-radius: 50%;
     }
 }

@@ -341,28 +341,33 @@ template {
   box-sizing: border-box;
 }
 
-header {
+.main-header {
   background-color: #7477bf;
   align-content: center;
+  padding-bottom: 0.125em;
 }
-header p {
+.main-header p {
   margin: auto;
   color: white;
   font-size: 2em;
   text-align: center;
 }
-header .header-list {
+.main-header .header-list {
   padding: 0;
   list-style: none;
   display: flex;
   width: 100%;
 }
-header .header-list li {
+.main-header .header-list li {
   width: calc(100% / 3);
   margin: auto;
+  text-align: center;
 }
-header .profile-img {
+.main-header .header-list li .profile-img {
   border-radius: 50%;
+}
+.main-header .header-list li svg {
+  border-right: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
