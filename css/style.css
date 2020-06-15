@@ -358,15 +358,15 @@ template {
   display: flex;
   width: 100%;
 }
-.main-header .header-list li {
+.main-header .header-list .header-item {
   width: calc(100% / 3);
   margin: auto;
   text-align: center;
 }
-.main-header .header-list li .profile-img {
+.main-header .header-list .header-item .profile-img {
   border-radius: 50%;
 }
-.main-header .header-list li svg {
+.main-header .header-list .header-item svg {
   border-right: 1px solid black;
 }
 
