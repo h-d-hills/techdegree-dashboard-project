@@ -8,6 +8,7 @@
     background-color: $primary-color;
     align-content: center;
     padding-bottom: 0.125em;
+    height: 9em;
     p {
         margin: auto;
         color: white;
@@ -19,15 +20,20 @@
         list-style: none;
         display: flex;
         width: 100%;
+        margin-top: -1em;
         .header-item {
             width: calc(100% / 3);
             margin: auto;
             text-align: center;
-            .profile-img {
-                border-radius: 50%;
-            }
-            svg {
-                border-right: 1px solid black;
+            li{
+                transform: scale(.5);
+                .profile-img {
+                    border-radius: 50%;
+                }
+                h3 {
+                    color: white;
+                    // height: 100%;
+                }
             }
         }
     }
