@@ -23,11 +23,11 @@
         width: 100%;
         margin-top: -1.5em;
         .header-item {
-            width: 50%;
             margin: auto;
             li{
                 text-align: center;
                 transform: scale(.5);
+                width: 100%;
                 &:last-child {
                     text-align: center;
                     display: flex;

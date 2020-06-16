@@ -367,6 +367,7 @@ template {
 .main-header .header-list .header-item li {
   text-align: center;
   transform: scale(0.5);
+  width: 100%;
 }
 .main-header .header-list .header-item li:last-child {
   text-align: center;
