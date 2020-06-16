@@ -50,10 +50,10 @@
     background-color: $darken-color;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1em 0;
     display: flex;
+    width: 100%;
     .nav-icon {
-        margin: 0em 100%;
-        margin: 0em 1.5em;
+        margin: 0em calc(calc(100% - 256px) / 8);
     }
 }
