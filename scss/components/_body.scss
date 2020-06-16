@@ -57,3 +57,41 @@
         margin: 0em calc(calc(100% - 256px) / 8);
     }
 }
+
+//The Grid
+.grid-container {
+    header {
+        grid-area: header;
+    }
+    nav {
+        grid-area: nav;
+    }
+    main {
+        grid-area: main;
+        display: grid;
+    }
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+    ;
+}
+
+//The Desktop View
+
+//The Grid
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-columns: 
+            'header header'
+            'nav main'
+        ;
+        main {
+            grid-template-columns: 50%;
+        }
+    }
+}
