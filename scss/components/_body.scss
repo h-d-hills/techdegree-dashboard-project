@@ -70,11 +70,15 @@
         grid-area: main;
         display: grid;
     }
+    .search-area {
+        grid-area: search;
+    }
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas: 
         'header'
+        'search'
         'nav'
         'main'
     ;
@@ -82,16 +86,28 @@
 
 //The Desktop View
 
-//The Grid
 @media (min-width: 768px) {
+    //The Grid
     .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-columns: 
+        grid-template-columns: 1fr 12fr;
+        grid-template-areas: 
             'header header'
+            'nav search'
             'nav main'
         ;
         main {
             grid-template-columns: 50%;
+        }
+    }
+
+    //The Nav
+    .nav-list {
+        flex-direction: column;
+        width: auto;
+        align-content: center;
+        height: 100%;
+        .nav-icon {
+            margin: 2em auto;
         }
     }
 }
