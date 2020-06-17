@@ -415,6 +415,25 @@ template {
 }
 
 @media (min-width: 768px) {
+  .main-header {
+    display: flex;
+  }
+  .main-header p {
+    margin-left: 2%;
+  }
+  .main-header .header-list {
+    margin-top: 0;
+    width: auto;
+  }
+  .main-header .header-list .header-item {
+    margin: 0 -5em;
+    margin-right: 0;
+  }
+  .main-header .header-list .header-item:first-child li {
+    margin-right: 1.5em;
+    border-right: 1px solid black;
+  }
+
   .grid-container {
     grid-template-columns: 1fr 12fr;
     grid-template-areas: "header header" "nav search" "nav main";

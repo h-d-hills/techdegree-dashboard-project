@@ -87,6 +87,28 @@
 //The Desktop View
 
 @media (min-width: 768px) {
+    //The Header
+    .main-header {
+        display: flex;
+        p {
+            margin-left: 2%;
+        }
+        .header-list {
+            margin-top: 0;
+            width: auto;
+            .header-item {
+                margin: 0 -5em;
+                margin-right: 0;
+                &:first-child {
+                    li {
+                        margin-right: 1.5em;
+                        border-right: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+
     //The Grid
     .grid-container {
         grid-template-columns: 1fr 12fr;
