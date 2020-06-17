@@ -170,6 +170,27 @@ main {
     }
 
     //The Grid
+    .traffic {
+        grid-area: traffic;
+    }
+    .daily {
+        grid-area: daily;
+    }
+    .social {
+        grid-area: social;
+    }
+    .new-members {
+        grid-area: new-members;
+    }
+    .recent-activity {
+        grid-area: recent-activity;
+    }
+    .messaging {
+        grid-area: messaging;
+    }
+    .settings {
+        grid-area: settings;
+    }
     .grid-container {
         grid-template-columns: 1fr 12fr;
         grid-template-areas: 
@@ -178,7 +199,15 @@ main {
             'nav main'
         ;
         main {
-            grid-template-columns: 50%;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                'traffic traffic'
+                'daily daily'
+                'social social'
+                'new-members recent-activity'
+                'messaging settings'
+            ;
         }
     }
 }
