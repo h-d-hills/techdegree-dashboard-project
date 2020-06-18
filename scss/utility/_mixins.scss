@@ -1,0 +1,17 @@
+@mixin member-format {
+    display: flex;
+    padding: 1em 0;
+    border-bottom: 1px solid black;
+    width: 90%;
+    img {
+        border-radius: 50%;
+        width: 15%;
+    }
+    .member-text {
+        margin: auto 1em auto;
+        p {
+            margin-bottom: 0.25em;
+            margin-top: 0;
+        }
+    }
+}
