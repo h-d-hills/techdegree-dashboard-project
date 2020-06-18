@@ -12,3 +12,4 @@ alertBanner.innerHTML =
 $('.alert-banner-close').click(function() {
     $('.alert-banner').slideUp();
 });
+
