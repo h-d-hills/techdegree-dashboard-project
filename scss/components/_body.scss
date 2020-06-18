@@ -105,6 +105,42 @@ main {
             }
         }
     }
+    .social {
+        .social-elements {
+            display: flex;
+            .social-container {
+                display: flex;
+                padding: 2em;
+                border: 1px solid black;
+                margin: 2em;
+                margin-left: 0;
+                width: 33%;
+                .social-image {
+                    margin: auto 0;
+                    background-color: $primary-color;
+                    margin-right: 2em;
+                    padding: 1em;
+                    border-radius: 50%;
+                }
+                .social-text {
+                    margin: auto 0;
+                    p {
+                        &:first-child {
+                            color: $primary-color;
+                            font-weight: bold;
+                            margin-top: 0;
+                        }
+                        &:last-child {
+                            font-size: 4em;
+                            font-weight: lighter;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //The Grid
