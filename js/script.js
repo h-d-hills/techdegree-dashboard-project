@@ -9,8 +9,6 @@ alertBanner.innerHTML =
     </div>
     `;
 
-alertBanner.addEventListener('click', (e) => {
-    if(e.target.classList.contains('alert-banner-close')) {
-        alertBanner.style.display = 'none';
-    }
+$('.alert-banner-close').click(function() {
+    $('.alert-banner').slideUp();
 });
