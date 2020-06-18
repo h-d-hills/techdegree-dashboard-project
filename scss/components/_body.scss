@@ -78,6 +78,20 @@
                 }
             }
         }
+        .alert {
+            .alert-banner {
+                width: 100%;
+                display: flex;
+                padding: 0.125em 1em;
+                color: white;
+                background-color: $primary-color;
+                .alert-banner-close {
+                    margin: auto;
+                    margin-right: 0;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
@@ -113,6 +127,7 @@ main {
                 padding: 2em;
                 border: 1px solid black;
                 margin: 2em 0;
+                background-color: #eee;
                 .social-image {
                     margin: auto 0;
                     background-color: $primary-color;
@@ -165,9 +180,11 @@ main {
             }
             .form-field {
                 height: 2em;
+                background-color: #eee;
             }
             .form-area {
                 height: 7em;
+                background-color: #eee;
             }
             .button-primary {
                 height: 3em;
@@ -192,17 +209,24 @@ main {
             }
         }
         .form-field {
+            background-color: #eee;
+            margin-top: 1em;
             width: 100%;
-            height: 2em;
+            height: 3em;
             margin-bottom: 1em;
         }
         .settings-buttons {
             button {
                 width: 100%;
+                height: 3em;
                 &:first-child {
                     color: white;
                     background-color: $primary-color;
                     margin-bottom: 1em;
+                }
+                &:last-child {
+                    color: white;
+                    background-color: #ccc;
                 }
             }
         }

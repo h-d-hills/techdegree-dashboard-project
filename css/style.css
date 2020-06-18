@@ -414,6 +414,18 @@ template {
   border-radius: 0.25em;
   width: 50%;
 }
+.search-section .search-area .alert .alert-banner {
+  width: 100%;
+  display: flex;
+  padding: 0.125em 1em;
+  color: white;
+  background-color: #7477bf;
+}
+.search-section .search-area .alert .alert-banner .alert-banner-close {
+  margin: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
 
 main {
   width: 95%;
@@ -443,6 +455,7 @@ main .social .social-elements .social-container {
   padding: 2em;
   border: 1px solid black;
   margin: 2em 0;
+  background-color: #eee;
 }
 main .social .social-elements .social-container .social-image {
   margin: auto 0;
@@ -515,9 +528,11 @@ main .messaging .widget-container .button-primary {
 }
 main .messaging .widget-container .form-field {
   height: 2em;
+  background-color: #eee;
 }
 main .messaging .widget-container .form-area {
   height: 7em;
+  background-color: #eee;
 }
 main .messaging .widget-container .button-primary {
   height: 3em;
@@ -539,17 +554,24 @@ main .settings .switch-light span {
   margin-right: 0;
 }
 main .settings .form-field {
+  background-color: #eee;
+  margin-top: 1em;
   width: 100%;
-  height: 2em;
+  height: 3em;
   margin-bottom: 1em;
 }
 main .settings .settings-buttons button {
   width: 100%;
+  height: 3em;
 }
 main .settings .settings-buttons button:first-child {
   color: white;
   background-color: #7477bf;
   margin-bottom: 1em;
+}
+main .settings .settings-buttons button:last-child {
+  color: white;
+  background-color: #ccc;
 }
 
 .grid-container {
