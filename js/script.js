@@ -1,6 +1,8 @@
 //Alert Banner
 const alertBanner = document.getElementById('alert');
 const trafficCanvas = document.getElementById('traffic-chart');
+const dailyCanvas = document.getElementById('daily-chart');
+const mobileCanvas = document.getElementById('mobile-chart');
 
 alertBanner.innerHTML = 
     `
@@ -48,8 +50,6 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 
 //Traffic Bar Graph
-const dailyCanvas = document.getElementById('daily-chart');
-
 const dailyData = {
     labels: ['S', 'M', 'T', 'W', 'Th', 'F', 'S'],
     datasets: [{
@@ -77,4 +77,35 @@ let dailyChart = new Chart(dailyCanvas, {
     type: 'bar',
     data: dailyData,
     options: dailyOptions
+});
+
+//Traffic Donut Graph
+const mobileData = {
+    labels: ['Desktop', 'Tablet', 'Phones'],
+    datasets: [{
+        label: '# of Users',
+        data: [2000, 550, 500],
+        borderWidth: 0,
+        backgroundColor: [
+            '#7477bf',
+            '#78cf82',
+            '#51b6c8'
+        ]
+    }]
+};
+
+const mobileOptions = {
+    legend: {
+        position: 'right',
+        labels: {
+            boxWidth: 20,
+            fontStyle: 'bold'
+        }
+    }
+}
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
 });

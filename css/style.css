@@ -653,6 +653,10 @@ main .settings .settings-buttons button:last-child {
     grid-area: daily;
   }
 
+  .mobile-users {
+    grid-area: mobile;
+  }
+
   .social {
     grid-area: social;
   }
@@ -680,7 +684,7 @@ main .settings .settings-buttons button:last-child {
   .grid-container main {
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
-    grid-template-areas: "traffic traffic" "daily daily" "social social" "new-members recent-activity" "messaging settings";
+    grid-template-areas: "traffic traffic" "daily mobile" "social social" "new-members recent-activity" "messaging settings";
   }
 }
 /*

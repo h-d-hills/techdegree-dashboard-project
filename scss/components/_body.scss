@@ -331,6 +331,9 @@ main {
     .daily {
         grid-area: daily;
     }
+    .mobile-users {
+        grid-area: mobile;
+    }
     .social {
         grid-area: social;
     }
@@ -358,7 +361,7 @@ main {
             grid-template-rows: auto;
             grid-template-areas: 
                 'traffic traffic'
-                'daily daily'
+                'daily mobile'
                 'social social'
                 'new-members recent-activity'
                 'messaging settings'
