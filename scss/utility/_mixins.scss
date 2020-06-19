@@ -3,9 +3,11 @@
     padding: 1em 0;
     border-bottom: 1px solid black;
     width: 90%;
+    height: 120px;
     img {
         border-radius: 50%;
-        width: 15%;
+        width: 87px;
+        height: 87px;
     }
     .member-text {
         margin: auto 1em auto;
@@ -13,5 +15,8 @@
             margin-bottom: 0.25em;
             margin-top: 0;
         }
+    }
+    &:last-child {
+        border-bottom: 0;
     }
 }

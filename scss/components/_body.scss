@@ -37,6 +37,7 @@
                         margin-right: 1em;
                     }
                     h3 {
+                        margin: auto 0;
                         color: white;
                         font-size: 2em;
                     }
@@ -60,26 +61,35 @@
 
 //The Search
 .search-section {
-    background-color: #eeeeee;
+    background-color: white;
     .search-area {
-        width: 95%;
         margin: 0 auto;
         .search-div {
             display: flex;
+            h2 {
+                padding-left: 2em;
+                margin-right: 2em;
+            }
             .search-bar {
-                margin: auto;
-                margin-right: 0;
+                margin: auto 0;
+                padding: 1em;
+                padding-right: 2em;
+                background-color: #eee;
                 width: 100%;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
                 input {
                     margin-left: 50%;
                     border-radius: .25em;
                     width: 50%;
+                    height: 2em;
                 }
             }
         }
         .alert {
             .alert-banner {
-                width: 100%;
+                margin-left: 2em;
+                width: calc(100% - 4em);
                 display: flex;
                 padding: 0.125em 1em;
                 color: white;
@@ -96,9 +106,8 @@
 
 //The Main
 main {
-    width: 95%;
-    margin: 0 auto;
     .traffic {
+        padding: 2em;
         .traffic-header {
             display: flex;
             .traffic-nav {
@@ -119,7 +128,23 @@ main {
             }
         }
     }
+    .daily,
+    .messaging {
+        border: 1px solid black;
+        border-left: 0;
+        padding: 0 2em;
+        padding-bottom: 1em;
+    }
+    .mobile-users,
+    .settings {
+        padding-left: 1em;
+        padding-bottom: 1em;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding-right: 2em;
+    }
     .social {
+        padding: 0 2em;
         .social-elements {
             .social-container {
                 display: flex;
@@ -154,6 +179,9 @@ main {
         }
     }
     .new-members {
+        padding-left: 2em;
+        border: 1px solid black;
+        border-left: 0;
         .member-container {
             @include member-format;
             .date {
@@ -163,11 +191,16 @@ main {
         }
     }
     .recent-activity {
+        padding-right: 2em;
+        padding-left: 2em;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
         .member-container {
             @include member-format;
         }
     }
     .messaging {
+        border-top: 0;
         .widget-container{
             display: flex;
             flex-direction: column;
@@ -193,6 +226,7 @@ main {
         }
     }
     .settings {
+        border-top: 0;
         .switch-light {
             width: 50%;
             display: flex;
@@ -263,7 +297,7 @@ canvas[class^='widget-container'] {
     ;
 }
 
-//The Desktop View
+//The Tablet View
 @media (min-width: 768px) {
     //The Header
     .main-header {
