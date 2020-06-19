@@ -53,7 +53,6 @@
     margin: 0;
     padding: 1em 0;
     display: flex;
-    width: 100%;
     .nav-icon {
         margin: 0em calc(calc(100% - 256px) / 8);
     }
@@ -233,6 +232,11 @@ main {
     }
 }
 
+//The Graphs
+canvas[class^='widget-container'] {
+    width: 95vw;
+}
+
 //The Grid
 .grid-container {
     header {
@@ -286,7 +290,6 @@ main {
     //The Nav
     .nav-list {
         flex-direction: column;
-        width: auto;
         align-content: center;
         height: 100%;
         .nav-icon {
@@ -322,6 +325,14 @@ main {
                 }
             }
         }
+    }
+
+    //The Graphs
+    .widget-container-full {
+        width: calc(90vw - 1fr);
+    }
+    .widget-container-half {
+        width: calc(45vw - 1fr);
     }
 
     //The Grid

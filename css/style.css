@@ -388,7 +388,6 @@ template {
   margin: 0;
   padding: 1em 0;
   display: flex;
-  width: 100%;
 }
 .nav-list .nav-icon {
   margin: 0em calc(calc(100% - 256px) / 8);
@@ -574,6 +573,10 @@ main .settings .settings-buttons button:last-child {
   background-color: #ccc;
 }
 
+canvas[class^=widget-container] {
+  width: 95vw;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -616,7 +619,6 @@ main .settings .settings-buttons button:last-child {
 
   .nav-list {
     flex-direction: column;
-    width: auto;
     align-content: center;
     height: 100%;
   }
@@ -643,6 +645,14 @@ main .settings .settings-buttons button:last-child {
   }
   main .settings .settings-buttons button:last-child {
     float: right;
+  }
+
+  .widget-container-full {
+    width: calc(90vw - 1fr);
+  }
+
+  .widget-container-half {
+    width: calc(45vw - 1fr);
   }
 
   .traffic {
