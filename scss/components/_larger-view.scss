@@ -1,0 +1,126 @@
+//The Tablet View
+@media (min-width: 768px) {
+    //The Header
+    .main-header {
+        display: flex;
+        p {
+            margin-left: 2%;
+        }
+        .header-list {
+            margin-top: 0;
+            width: auto;
+            .header-item {
+                margin: 0 -5em;
+                margin-right: 0;
+                &:first-child {
+                    li {
+                        margin-right: 1.5em;
+                        border-right: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+
+    //The Nav
+    .nav-list {
+        flex-direction: column;
+        align-content: center;
+        height: 100%;
+        .nav-icon {
+            margin: 2em auto;
+            transform: scale(.85);
+        }
+    }
+
+    //The Main
+    main {
+        .daily,
+        .new-members,
+        .messaging {
+            border-right: 1px solid black;
+        }
+        .recent-activity,
+        .mobile-users {
+            border-top: 1px solid black;
+        }
+        .social {
+            .social-elements {
+                display: flex;
+                .social-container {
+                    width: calc(100% / 3);
+                    margin-right: 2em;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .settings {
+            .settings-buttons {
+                button {
+                    width: 45%;
+                    &:first-child {
+                        margin-bottom: 0;
+                    }
+                    &:last-child {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+
+    //The Graphs
+    .widget-container-full {
+        width: calc(calc(90vw - 1fr) - 4em);
+    }
+    .widget-container-half {
+        width: calc(45vw - 1fr);
+    }
+
+    //The Grid
+    .traffic {
+        grid-area: traffic;
+    }
+    .daily {
+        grid-area: daily;
+    }
+    .mobile-users {
+        grid-area: mobile;
+    }
+    .social {
+        grid-area: social;
+    }
+    .new-members {
+        grid-area: new-members;
+    }
+    .recent-activity {
+        grid-area: recent-activity;
+    }
+    .messaging {
+        grid-area: messaging;
+    }
+    .settings {
+        grid-area: settings;
+    }
+    .grid-container {
+        grid-template-columns: 10% 90%;
+        grid-template-areas: 
+            'header header'
+            'nav search'
+            'nav main'
+        ;
+        main {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                'traffic traffic'
+                'daily mobile'
+                'social social'
+                'new-members recent-activity'
+                'messaging settings'
+            ;
+        }
+    }
+}

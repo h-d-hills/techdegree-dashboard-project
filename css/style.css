@@ -409,6 +409,7 @@ template {
 }
 .search-section .search-area .search-div .search-bar {
   margin: auto 0;
+  margin-top: 0;
   padding: 1em;
   padding-right: 2em;
   background-color: #eee;
@@ -461,15 +462,16 @@ main .traffic .traffic-header .traffic-nav li:last-child {
 main .daily,
 main .messaging {
   border: 1px solid black;
+  border-right: 0;
   border-left: 0;
   padding: 0 2em;
   padding-bottom: 1em;
 }
 main .mobile-users,
 main .settings {
-  padding-left: 1em;
+  padding-left: 2em;
   padding-bottom: 1em;
-  border-top: 1px solid black;
+  border-top: 0;
   border-bottom: 1px solid black;
   padding-right: 2em;
 }
@@ -507,6 +509,7 @@ main .social .social-elements .social-container .social-text p:last-child {
 main .new-members {
   padding-left: 2em;
   border: 1px solid black;
+  border-right: 0;
   border-left: 0;
 }
 main .new-members .member-container {
@@ -536,9 +539,8 @@ main .new-members .member-container .date {
   margin-right: 0;
 }
 main .recent-activity {
-  padding-right: 2em;
   padding-left: 2em;
-  border-top: 1px solid black;
+  border-top: 0;
   border-bottom: 1px solid black;
 }
 main .recent-activity .member-container {
@@ -563,10 +565,20 @@ main .recent-activity .member-container .member-text p {
 main .recent-activity .member-container:last-child {
   border-bottom: 0;
 }
+main .recent-activity .member-container .date {
+  margin: auto;
+  margin-right: 0;
+}
+main .recent-activity .member-container .date {
+  transform: scaleY(2);
+}
 main .messaging {
   border-top: 0;
 }
 main .messaging .widget-container {
+  padding: 0;
+  align-items: center;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -574,7 +586,7 @@ main .messaging .widget-container .form-field,
 main .messaging .widget-container .form-area,
 main .messaging .widget-container .button-primary {
   margin-bottom: 1em;
-  width: 90%;
+  width: 100%;
 }
 main .messaging .widget-container .form-field {
   height: 2em;
@@ -593,6 +605,7 @@ main .settings {
   border-top: 0;
 }
 main .settings .switch-light {
+  padding-left: 1em;
   width: 50%;
   display: flex;
   width: auto 0;
@@ -635,7 +648,7 @@ canvas[class^=widget-container] {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "header" "search" "nav" "main";
+  grid-template-areas: "header" "nav" "search" "main";
 }
 .grid-container header {
   grid-area: header;
@@ -651,106 +664,6 @@ canvas[class^=widget-container] {
   grid-area: search;
 }
 
-@media (min-width: 768px) {
-  .main-header {
-    display: flex;
-  }
-  .main-header p {
-    margin-left: 2%;
-  }
-  .main-header .header-list {
-    margin-top: 0;
-    width: auto;
-  }
-  .main-header .header-list .header-item {
-    margin: 0 -5em;
-    margin-right: 0;
-  }
-  .main-header .header-list .header-item:first-child li {
-    margin-right: 1.5em;
-    border-right: 1px solid black;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-content: center;
-    height: 100%;
-  }
-  .nav-list .nav-icon {
-    margin: 2em auto;
-    transform: scale(0.85);
-  }
-
-  main .social .social-elements {
-    display: flex;
-  }
-  main .social .social-elements .social-container {
-    width: calc(100% / 3);
-    margin-right: 2em;
-  }
-  main .social .social-elements .social-container:last-child {
-    margin-right: 0;
-  }
-  main .settings .settings-buttons button {
-    width: 45%;
-  }
-  main .settings .settings-buttons button:first-child {
-    margin-bottom: 0;
-  }
-  main .settings .settings-buttons button:last-child {
-    float: right;
-  }
-
-  .widget-container-full {
-    width: calc(90vw - 1fr);
-  }
-
-  .widget-container-half {
-    width: calc(45vw - 1fr);
-  }
-
-  .traffic {
-    grid-area: traffic;
-  }
-
-  .daily {
-    grid-area: daily;
-  }
-
-  .mobile-users {
-    grid-area: mobile;
-  }
-
-  .social {
-    grid-area: social;
-  }
-
-  .new-members {
-    grid-area: new-members;
-  }
-
-  .recent-activity {
-    grid-area: recent-activity;
-  }
-
-  .messaging {
-    grid-area: messaging;
-  }
-
-  .settings {
-    grid-area: settings;
-  }
-
-  .grid-container {
-    grid-template-columns: 1fr 12fr;
-    grid-template-areas: "header header" "nav search" "nav main";
-  }
-  .grid-container main {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: "traffic traffic" "daily mobile" "social social" "new-members recent-activity" "messaging settings";
-  }
-}
 /*
 * CSS TOGGLE SWITCH
 *
@@ -1434,5 +1347,114 @@ canvas[class^=widget-container] {
   }
 }
 /*# sourceMappingURL=toggle-switch.css.map */
+@media (min-width: 768px) {
+  .main-header {
+    display: flex;
+  }
+  .main-header p {
+    margin-left: 2%;
+  }
+  .main-header .header-list {
+    margin-top: 0;
+    width: auto;
+  }
+  .main-header .header-list .header-item {
+    margin: 0 -5em;
+    margin-right: 0;
+  }
+  .main-header .header-list .header-item:first-child li {
+    margin-right: 1.5em;
+    border-right: 1px solid black;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+  }
+  .nav-list .nav-icon {
+    margin: 2em auto;
+    transform: scale(0.85);
+  }
+
+  main .daily,
+main .new-members,
+main .messaging {
+    border-right: 1px solid black;
+  }
+  main .recent-activity,
+main .mobile-users {
+    border-top: 1px solid black;
+  }
+  main .social .social-elements {
+    display: flex;
+  }
+  main .social .social-elements .social-container {
+    width: calc(100% / 3);
+    margin-right: 2em;
+  }
+  main .social .social-elements .social-container:last-child {
+    margin-right: 0;
+  }
+  main .settings .settings-buttons button {
+    width: 45%;
+  }
+  main .settings .settings-buttons button:first-child {
+    margin-bottom: 0;
+  }
+  main .settings .settings-buttons button:last-child {
+    float: right;
+  }
+
+  .widget-container-full {
+    width: calc(calc(90vw - 1fr) - 4em);
+  }
+
+  .widget-container-half {
+    width: calc(45vw - 1fr);
+  }
+
+  .traffic {
+    grid-area: traffic;
+  }
+
+  .daily {
+    grid-area: daily;
+  }
+
+  .mobile-users {
+    grid-area: mobile;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .new-members {
+    grid-area: new-members;
+  }
+
+  .recent-activity {
+    grid-area: recent-activity;
+  }
+
+  .messaging {
+    grid-area: messaging;
+  }
+
+  .settings {
+    grid-area: settings;
+  }
+
+  .grid-container {
+    grid-template-columns: 10% 90%;
+    grid-template-areas: "header header" "nav search" "nav main";
+  }
+  .grid-container main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "traffic traffic" "daily mobile" "social social" "new-members recent-activity" "messaging settings";
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

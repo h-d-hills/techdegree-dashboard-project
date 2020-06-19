@@ -72,6 +72,7 @@
             }
             .search-bar {
                 margin: auto 0;
+                margin-top: 0;
                 padding: 1em;
                 padding-right: 2em;
                 background-color: #eee;
@@ -131,15 +132,16 @@ main {
     .daily,
     .messaging {
         border: 1px solid black;
+        border-right: 0;
         border-left: 0;
         padding: 0 2em;
         padding-bottom: 1em;
     }
     .mobile-users,
     .settings {
-        padding-left: 1em;
+        padding-left: 2em;
         padding-bottom: 1em;
-        border-top: 1px solid black;
+        border-top: 0;
         border-bottom: 1px solid black;
         padding-right: 2em;
     }
@@ -181,34 +183,36 @@ main {
     .new-members {
         padding-left: 2em;
         border: 1px solid black;
+        border-right: 0;
         border-left: 0;
         .member-container {
             @include member-format;
-            .date {
-                margin: auto;
-                margin-right: 0;
-            }
         }
     }
     .recent-activity {
-        padding-right: 2em;
         padding-left: 2em;
-        border-top: 1px solid black;
+        border-top: 0;
         border-bottom: 1px solid black;
         .member-container {
             @include member-format;
+            .date {
+                transform: scaleY(2);
+            }
         }
     }
     .messaging {
         border-top: 0;
         .widget-container{
+            padding: 0;
+            align-items: center;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             .form-field,
             .form-area,
             .button-primary {
                 margin-bottom: 1em;
-                width: 90%;
+                width: 100%;
             }
             .form-field {
                 height: 2em;
@@ -228,6 +232,7 @@ main {
     .settings {
         border-top: 0;
         .switch-light {
+            padding-left: 1em;
             width: 50%;
             display: flex;
             width: auto 0;
@@ -291,126 +296,8 @@ canvas[class^='widget-container'] {
     grid-template-rows: auto;
     grid-template-areas: 
         'header'
-        'search'
         'nav'
+        'search'
         'main'
     ;
-}
-
-//The Tablet View
-@media (min-width: 768px) {
-    //The Header
-    .main-header {
-        display: flex;
-        p {
-            margin-left: 2%;
-        }
-        .header-list {
-            margin-top: 0;
-            width: auto;
-            .header-item {
-                margin: 0 -5em;
-                margin-right: 0;
-                &:first-child {
-                    li {
-                        margin-right: 1.5em;
-                        border-right: 1px solid black;
-                    }
-                }
-            }
-        }
-    }
-
-    //The Nav
-    .nav-list {
-        flex-direction: column;
-        align-content: center;
-        height: 100%;
-        .nav-icon {
-            margin: 2em auto;
-            transform: scale(.85);
-        }
-    }
-
-    //The Main
-    main {
-        .social {
-            .social-elements {
-                display: flex;
-                .social-container {
-                    width: calc(100% / 3);
-                    margin-right: 2em;
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-        .settings {
-            .settings-buttons {
-                button {
-                    width: 45%;
-                    &:first-child {
-                        margin-bottom: 0;
-                    }
-                    &:last-child {
-                        float: right;
-                    }
-                }
-            }
-        }
-    }
-
-    //The Graphs
-    .widget-container-full {
-        width: calc(90vw - 1fr);
-    }
-    .widget-container-half {
-        width: calc(45vw - 1fr);
-    }
-
-    //The Grid
-    .traffic {
-        grid-area: traffic;
-    }
-    .daily {
-        grid-area: daily;
-    }
-    .mobile-users {
-        grid-area: mobile;
-    }
-    .social {
-        grid-area: social;
-    }
-    .new-members {
-        grid-area: new-members;
-    }
-    .recent-activity {
-        grid-area: recent-activity;
-    }
-    .messaging {
-        grid-area: messaging;
-    }
-    .settings {
-        grid-area: settings;
-    }
-    .grid-container {
-        grid-template-columns: 1fr 12fr;
-        grid-template-areas: 
-            'header header'
-            'nav search'
-            'nav main'
-        ;
-        main {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto;
-            grid-template-areas: 
-                'traffic traffic'
-                'daily mobile'
-                'social social'
-                'new-members recent-activity'
-                'messaging settings'
-            ;
-        }
-    }
 }
