@@ -486,11 +486,20 @@ main .social .social-elements .social-container {
   background-color: #eee;
 }
 main .social .social-elements .social-container .social-image {
-  margin: auto 0;
+  width: 7.5vw;
+  height: 7.5vw;
   background-color: #7477bf;
-  margin-right: 2em;
-  padding: 1em;
   border-radius: 50%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas: "image";
+}
+main .social .social-elements .social-container .social-image img {
+  grid-area: image;
+  width: 50%;
+  display: block;
+  margin: auto;
 }
 main .social .social-elements .social-container .social-text {
   margin: auto 0;
