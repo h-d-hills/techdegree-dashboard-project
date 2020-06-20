@@ -466,6 +466,7 @@ main .messaging {
   border-left: 0;
   padding: 0 2em;
   padding-bottom: 1em;
+  padding-right: 0;
 }
 main .mobile-users,
 main .settings {
@@ -480,14 +481,15 @@ main .social {
 }
 main .social .social-elements .social-container {
   display: flex;
-  padding: 2em;
+  padding: 1em;
   border: 1px solid black;
   margin: 2em 0;
   background-color: #eee;
+  width: calc(100vw - 4em);
 }
 main .social .social-elements .social-container .social-image {
-  width: 7.5vw;
-  height: 7.5vw;
+  width: 15vw;
+  height: 15vw;
   background-color: #7477bf;
   border-radius: 50%;
   display: grid;
@@ -503,6 +505,7 @@ main .social .social-elements .social-container .social-image img {
 }
 main .social .social-elements .social-container .social-text {
   margin: auto 0;
+  margin-left: 1em;
 }
 main .social .social-elements .social-container .social-text p:first-child {
   color: #7477bf;
@@ -529,7 +532,7 @@ main .new-members .member-container {
   display: flex;
   padding: 1em 0;
   border-bottom: 1px solid black;
-  width: 90%;
+  width: calc(95vw - 4em);
   height: 120px;
 }
 main .new-members .member-container img {
@@ -560,7 +563,7 @@ main .recent-activity .member-container {
   display: flex;
   padding: 1em 0;
   border-bottom: 1px solid black;
-  width: 90%;
+  width: calc(95vw - 4em);
   height: 120px;
 }
 main .recent-activity .member-container img {
@@ -592,8 +595,10 @@ main .messaging .widget-container {
   padding: 0;
   align-items: center;
   margin: 0 auto;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
+  width: calc(100vw - 4em);
 }
 main .messaging .widget-container .form-field,
 main .messaging .widget-container .form-area,
@@ -635,12 +640,12 @@ main .settings .switch-light span {
 main .settings .form-field {
   background-color: #eee;
   margin-top: 1em;
-  width: 100%;
+  width: calc(100vw - 4em);
   height: 3em;
   margin-bottom: 1em;
 }
 main .settings .settings-buttons button {
-  width: 100%;
+  width: calc(100vw - 4em);
   height: 3em;
 }
 main .settings .settings-buttons button:first-child {
@@ -652,9 +657,20 @@ main .settings .settings-buttons button:last-child {
   color: white;
   background-color: #ccc;
 }
+main .traffic,
+main .daily,
+main .mobile-users,
+main .social,
+main .new-members,
+main .recent-activity,
+main .messaging,
+main .settings {
+  padding-right: 0;
+  padding-left: 1.5em;
+}
 
 canvas[class^=widget-container] {
-  width: 95vw;
+  width: calc(90vw - 4em);
 }
 
 .grid-container {
@@ -1406,8 +1422,10 @@ main .mobile-users {
     width: calc(100% / 3);
     margin-right: 2em;
   }
-  main .social .social-elements .social-container:last-child {
-    margin-right: 0;
+  main .social .social-elements .social-container .social-image {
+    width: 7.5vw;
+    height: 7.5vw;
+    margin: auto 0;
   }
   main .settings .settings-buttons button {
     width: 45%;

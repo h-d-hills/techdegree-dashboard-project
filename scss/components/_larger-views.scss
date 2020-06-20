@@ -52,8 +52,10 @@
                 .social-container {
                     width: calc(100% / 3);
                     margin-right: 2em;
-                    &:last-child {
-                        margin-right: 0;
+                    .social-image {
+                        width: 7.5vw;
+                        height: 7.5vw;
+                        margin: auto 0;
                     }
                 }
             }

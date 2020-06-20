@@ -136,6 +136,7 @@ main {
         border-left: 0;
         padding: 0 2em;
         padding-bottom: 1em;
+        padding-right: 0;
     }
     .mobile-users,
     .settings {
@@ -150,13 +151,14 @@ main {
         .social-elements {
             .social-container {
                 display: flex;
-                padding: 2em;
+                padding: 1em;
                 border: 1px solid black;
                 margin: 2em 0;
                 background-color: #eee;
+                width: calc(100vw - 4em);
                 .social-image {
-                    width: 7.5vw;
-                    height: 7.5vw;
+                    width: 15vw;
+                    height: 15vw;
                     background-color: $primary-color;
                     border-radius: 50%;
                     display: grid;
@@ -174,6 +176,7 @@ main {
                 }
                 .social-text {
                     margin: auto 0;
+                    margin-left: 1em;
                     p {
                         &:first-child {
                             color: $primary-color;
@@ -221,8 +224,10 @@ main {
             padding: 0;
             align-items: center;
             margin: 0 auto;
+            margin-left: 0;
             display: flex;
             flex-direction: column;
+            width: calc(100vw - 4em);
             .form-field,
             .form-area,
             .button-primary {
@@ -266,13 +271,13 @@ main {
         .form-field {
             background-color: #eee;
             margin-top: 1em;
-            width: 100%;
+            width: calc(100vw - 4em);
             height: 3em;
             margin-bottom: 1em;
         }
         .settings-buttons {
             button {
-                width: 100%;
+                width: calc(100vw - 4em);
                 height: 3em;
                 &:first-child {
                     color: white;
@@ -286,11 +291,22 @@ main {
             }
         }
     }
+    .traffic,
+    .daily,
+    .mobile-users,
+    .social,
+    .new-members,
+    .recent-activity,
+    .messaging,
+    .settings {
+        padding-right: 0;
+        padding-left: 1.5em;
+    }
 }
 
 //The Graphs
 canvas[class^='widget-container'] {
-    width: 95vw;
+    width: calc(90vw - 4em);
 }
 
 //The Grid
