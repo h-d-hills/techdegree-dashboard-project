@@ -512,6 +512,10 @@ main .new-members {
   border-right: 0;
   border-left: 0;
 }
+main .new-members .post-image {
+  display: flex;
+  width: 100%;
+}
 main .new-members .member-container {
   display: flex;
   padding: 1em 0;
@@ -525,7 +529,7 @@ main .new-members .member-container img {
   height: 87px;
 }
 main .new-members .member-container .member-text {
-  margin: auto 1em auto;
+  margin: auto 0.25em auto 1em;
 }
 main .new-members .member-container .member-text p {
   margin-bottom: 0.25em;
@@ -556,7 +560,7 @@ main .recent-activity .member-container img {
   height: 87px;
 }
 main .recent-activity .member-container .member-text {
-  margin: auto 1em auto;
+  margin: auto 0.25em auto 1em;
 }
 main .recent-activity .member-container .member-text p {
   margin-bottom: 0.25em;
@@ -1405,6 +1409,21 @@ main .mobile-users {
   main .settings .settings-buttons button:last-child {
     float: right;
   }
+  main .new-members .member-container .post-image {
+    flex-direction: column;
+    padding-left: 1em;
+    margin: auto 0;
+  }
+  main .new-members .member-container .post-image .member-text {
+    margin-bottom: 1em;
+    margin-left: 0em;
+  }
+  main .new-members .member-container .post-image:last-child {
+    margin-left: 0;
+  }
+  main .new-members .member-container .post-image .date {
+    margin-left: 0;
+  }
 
   .widget-container-full {
     width: calc(calc(90vw - 1fr) - 4em);
@@ -1454,6 +1473,20 @@ main .mobile-users {
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     grid-template-areas: "traffic traffic" "daily mobile" "social social" "new-members recent-activity" "messaging settings";
+  }
+}
+@media (min-width: 1024px) {
+  main .new-members .member-container .post-image {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  main .new-members .member-container .post-image .member-text {
+    margin-bottom: 0;
+  }
+  main .new-members .member-container .post-image .date {
+    margin: auto;
+    margin-right: 0;
   }
 }
 

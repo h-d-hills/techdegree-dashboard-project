@@ -1,3 +1,5 @@
+@import '../utility/mixins';
+
 //The Tablet View
 @media (min-width: 768px) {
     //The Header
@@ -69,6 +71,25 @@
                 }
             }
         }
+        .new-members {
+            .member-container {
+                .post-image {
+                    flex-direction: column;
+                    padding-left: 1em;
+                    .member-text {
+                        margin-bottom: 1em;
+                        margin-left: 0em;
+                    }
+                    margin: auto 0;
+                    &:last-child {
+                        margin-left: 0;
+                    }
+                    .date {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
     }
 
     //The Graphs
@@ -121,6 +142,27 @@
                 'new-members recent-activity'
                 'messaging settings'
             ;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        .new-members {
+            .member-container {
+                .post-image {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    .member-text {
+                        margin-bottom: 0;
+                    }
+                    .date {
+                        margin: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
 }
