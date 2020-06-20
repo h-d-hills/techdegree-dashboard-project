@@ -554,6 +554,11 @@ main .new-members .member-container .date {
   margin: auto;
   margin-right: 0;
 }
+@media (min-width: 768px) {
+  main .new-members .member-container {
+    width: 100%;
+  }
+}
 main .recent-activity {
   padding-left: 2em;
   border-top: 0;
@@ -584,6 +589,11 @@ main .recent-activity .member-container:last-child {
 main .recent-activity .member-container .date {
   margin: auto;
   margin-right: 0;
+}
+@media (min-width: 768px) {
+  main .recent-activity .member-container {
+    width: 100%;
+  }
 }
 main .recent-activity .member-container .date {
   transform: scaleY(2);
@@ -667,6 +677,12 @@ main .messaging,
 main .settings {
   padding-right: 0;
   padding-left: 1.5em;
+}
+main .traffic,
+main .daily,
+main .mobile-users {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
 
 canvas[class^=widget-container] {
@@ -1427,6 +1443,13 @@ main .mobile-users {
     height: 7.5vw;
     margin: auto 0;
   }
+  main .messaging .widget-container {
+    width: 100%;
+    padding-right: 1.5em;
+  }
+  main .settings .form-field {
+    width: 100%;
+  }
   main .settings .settings-buttons button {
     width: 45%;
   }
@@ -1450,6 +1473,14 @@ main .mobile-users {
   }
   main .new-members .member-container .post-image .date {
     margin-left: 0;
+  }
+  main .new-members,
+main .recent-activity,
+main .settings,
+main .daily,
+main .mobile-users,
+main .traffic {
+    padding-right: 1.5em;
   }
 
   .widget-container-full {
