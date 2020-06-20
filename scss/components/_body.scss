@@ -236,18 +236,20 @@ main {
     .settings {
         border-top: 0;
         .switch-light {
-            padding-left: 1em;
-            width: 50%;
-            display: flex;
-            width: auto 0;
+            display: grid;
             margin-bottom: 1em;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(3, calc(100% / 3));
+            grid-template-areas: 
+                'setting switch .'
+            ;
             strong {
-                margin: auto 0;
+                grid-area: setting;
             }
             span {
-                width: 35%;
-                margin: auto;
-                margin-right: 0;
+                margin: 0 auto;
+                width: 75%;
+                grid-area: switch;
             }
         }
         .form-field {
