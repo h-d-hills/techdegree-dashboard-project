@@ -508,6 +508,7 @@ main {
 }
 main .traffic {
   padding: 2em;
+  padding-right: 0;
 }
 main .traffic .traffic-header {
   display: flex;
@@ -1459,12 +1460,6 @@ button {
 /* Bugfix for older Webkit, including mobile Webkit. Adapted from
  * http://css-tricks.com/webkit-sibling-bug/
  */
-@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 80em) {
-  .switch-light,
-.switch-toggle {
-    -webkit-animation: webkitSiblingBugfix infinite 1s;
-  }
-}
 @-webkit-keyframes webkitSiblingBugfix {
   from {
     -webkit-transform: translate3d(0, 0, 0);
@@ -1575,14 +1570,6 @@ main .traffic,
 main .messaging {
     padding-right: 1.5em;
     width: 100%;
-  }
-
-  .widget-container-full {
-    width: calc(calc(90vw - 1fr) - 4em);
-  }
-
-  .widget-container-half {
-    width: calc(45vw - 1fr);
   }
 
   .traffic {

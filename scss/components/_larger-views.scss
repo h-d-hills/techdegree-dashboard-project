@@ -128,14 +128,6 @@
         }
     }
 
-    //The Graphs
-    .widget-container-full {
-        width: calc(calc(90vw - 1fr) - 4em);
-    }
-    .widget-container-half {
-        width: calc(45vw - 1fr);
-    }
-
     //The Grid
     .traffic {
         grid-area: traffic;
