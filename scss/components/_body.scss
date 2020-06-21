@@ -31,9 +31,9 @@
                 width: 2em;
                 height: 2em;
                 border-radius: 50%;
-                margin-left: -1em;
-                opacity: 0;
+                margin-left: -3.5em;
                 transition: .4s;
+                z-index: 1;
             }
             li{
                 text-align: center;
@@ -43,6 +43,32 @@
                     transition: .4s;
                     &:hover {
                         transform: scale(1.1) rotate(5deg);
+                        margin-right: 4%;
+                        z-index: 0;
+                    }
+                }
+                .dropdown-content {
+                    display: none;
+                    margin-top: 10em;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    z-index: 2;
+                    border: 7.5px dashed $green-blue;
+                    width: auto;
+                    a {
+                        margin: 1em;
+                        display: block;
+                        width: 10em;
+                        font-size: 2em;
+                        text-decoration: none;
+                        color: black;
+                        display: flex;
+                        .note-message {
+                            text-align: left;
+                        }
+                        .close {
+                            margin: auto 0;
+                        }
                     }
                 }
                 &:last-child {
@@ -199,9 +225,6 @@ main {
                         width: 60%;
                         display: block;
                         margin: auto;
-                        path {
-                            margin: 0 auto;
-                        }
                     }
                 }
                 .social-text {

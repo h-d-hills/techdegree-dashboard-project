@@ -20,16 +20,21 @@ alertBanner.innerHTML =
 
 $('.alert-banner-close').click(function() {
     $('.alert-banner').slideUp();
-    noteDot.style.opacity = '1';
 });
 
+//Dropdown
+$('#dropdown')[0].style.display = 'none';
 $(noteBell).click(function() {
-    $('.alert-banner').slideDown();
-    noteDot.style.opacity = '0';
+    if($('#dropdown')[0].style.display == 'none'){
+        $('#dropdown').slideDown();
+        noteDot.style.opacity = '0';
+    }else{
+        $('#dropdown').slideUp();
+        noteDot.style.opacity = '1';
+    }
 });
 
 //Traffic Line Graph
-
 //Traffic Times
 function findIndex(e) {
     for(let i=0; i<trafficList.children.length; i++) {
