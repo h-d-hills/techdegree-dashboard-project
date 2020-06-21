@@ -404,12 +404,25 @@ template {
   text-decoration: none;
   color: black;
   display: flex;
+  cursor: default;
 }
 .main-header .header-list .header-item li .dropdown-content a .note-message {
   text-align: left;
 }
 .main-header .header-list .header-item li .dropdown-content a .close {
-  margin: auto 0;
+  cursor: pointer;
+  margin: auto;
+  margin-left: 0.5em;
+  background-color: rgba(255, 99, 71, 0.8);
+  color: white;
+  padding: 0.25em;
+  font-weight: 800;
+  border-radius: 0.25em;
+  padding-bottom: 14px;
+  transition: 0.4s;
+}
+.main-header .header-list .header-item li .dropdown-content a .close:hover {
+  background-color: tomato;
 }
 .main-header .header-list .header-item li:last-child {
   text-align: center;

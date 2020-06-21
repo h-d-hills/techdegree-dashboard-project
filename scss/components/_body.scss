@@ -63,11 +63,24 @@
                         text-decoration: none;
                         color: black;
                         display: flex;
+                        cursor: default;
                         .note-message {
                             text-align: left;
                         }
                         .close {
-                            margin: auto 0;
+                            cursor: pointer;
+                            margin: auto;
+                            margin-left: .5em;
+                            background-color: rgba(255, 99, 71.1, .8);
+                            color: white;
+                            padding: .25em;
+                            font-weight: 800;
+                            border-radius: .25em;
+                            padding-bottom: 14px;
+                            transition: .4s;
+                            &:hover {
+                                background-color: rgba(255, 99, 71.1, 1);
+                            }
                         }
                     }
                 }
