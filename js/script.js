@@ -283,4 +283,6 @@ send.addEventListener('click', () => {
     }else {
         alert(`Message sent to ${user.value}.`);
     }
+    document.getElementById('userfield').value = '';
+    document.getElementById('messagefield').value = '';
 });
