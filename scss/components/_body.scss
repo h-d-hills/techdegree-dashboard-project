@@ -130,6 +130,10 @@ main {
                 margin-right: 0;
                 display: flex;
                 list-style: none;
+                .active {
+                    background-color: $green-blue;
+                    color: white;
+                }
                 li {
                     color: black;
                     padding: .5em 1em;

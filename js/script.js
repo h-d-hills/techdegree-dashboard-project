@@ -7,6 +7,7 @@ const message = document.getElementById('messagefield');
 const send = document.getElementById('send');
 const noteDot = document.getElementById('notifications');
 const noteBell = document.getElementById('not-bell').parentNode;
+const trafficList = document.getElementsByClassName('traffic-nav')[0];
 
 //Alert Banner
 alertBanner.innerHTML = 
@@ -28,6 +29,128 @@ $(noteBell).click(function() {
 });
 
 //Traffic Line Graph
+
+//Traffic Times
+function findIndex(e) {
+    for(let i=0; i<trafficList.children.length; i++) {
+        if(e.target.textContent == trafficList.children[i].textContent) {
+            return i;
+        }
+    }
+}
+trafficList.addEventListener('click', (e) => {
+    for(let i=0; i<trafficList.children.length; i++) {
+        trafficList.children[i].className = 'traffic-nav-link';
+    }
+    trafficList.children[findIndex(e)].classList.add('active');
+    if(trafficList.children[findIndex(e)].textContent == 'Hourly') {
+        trafficData = {
+            labels: ['1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
+            datasets: [{
+                data: [8, 5, 8, 0, 2, 6, 3, 4, 1, 9, 2, 7, 2, 7, 10, 3, 7, 2, 8, 8, 10, 3, 6, 9],
+                backgroundColor: 'rgba(116, 119, 191, .3)',
+                borderWidth: 1,
+            }]
+        };
+        trafficOptions = {
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+        };
+        new Chart(trafficCanvas, {
+            type: 'line',
+            data: trafficData,
+            options: trafficOptions
+        });
+    }else if(trafficList.children[findIndex(e)].textContent == 'Daily') {
+        trafficData = {
+            labels: ['S', 'M', 'T', 'W', 'Th', 'F', 'S'],
+            datasets: [{
+                data: [75, 115, 175, 125, 225, 200, 100],
+                backgroundColor: 'rgba(116, 119, 191, .3)',
+                borderWidth: 1,
+            }]
+        };
+        trafficOptions = {
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+        };
+        new Chart(trafficCanvas, {
+            type: 'line',
+            data: trafficData,
+            options: trafficOptions
+        });
+    }else if(trafficList.children[findIndex(e)].textContent == 'Weekly'){
+        trafficData = {
+            labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+            datasets: [{
+                data: [750, 1250, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500, 2250],
+                backgroundColor: 'rgba(116, 119, 191, .3)',
+                borderWidth: 1,
+            }]
+        };
+        trafficOptions = {
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+        };
+        new Chart(trafficCanvas, {
+            type: 'line',
+            data: trafficData,
+            options: trafficOptions
+        });
+    }else if(trafficList.children[findIndex(e)].textContent == 'Monthly') {
+        trafficData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                data: [18850, 17425, 11718, 21601, 21401, 18728, 7896, 13130, 9840, 19750, 15320, 17415],
+                backgroundColor: 'rgba(116, 119, 191, .3)',
+                borderWidth: 1,
+            }]
+        };
+        trafficOptions = {
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+        };
+        new Chart(trafficCanvas, {
+            type: 'line',
+            data: trafficData,
+            options: trafficOptions
+        });
+    }
+});
+
+//Graph Data
 let trafficData = {
     labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
     datasets: [{

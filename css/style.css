@@ -467,6 +467,10 @@ main .traffic .traffic-header .traffic-nav {
   display: flex;
   list-style: none;
 }
+main .traffic .traffic-header .traffic-nav .active {
+  background-color: #88cc95;
+  color: white;
+}
 main .traffic .traffic-header .traffic-nav li {
   color: black;
   padding: 0.5em 1em;
