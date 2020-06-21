@@ -8,6 +8,14 @@ const send = document.getElementById('send');
 const noteDot = document.getElementById('notifications');
 const noteBell = document.getElementById('not-bell').parentNode;
 const trafficList = document.getElementsByClassName('traffic-nav')[0];
+const noteMessages = $('#dropdown')[0];
+function findIndex(e, list) {
+    for(let i=0; i<list.children.length; i++) {
+        if(e.target.textContent == list.children[i].textContent) {
+            return i;
+        }
+    }
+}
 
 //Alert Banner
 alertBanner.innerHTML = 
@@ -34,21 +42,25 @@ $(noteBell).click(function() {
     }
 });
 
-//Traffic Line Graph
-//Traffic Times
-function findIndex(e) {
-    for(let i=0; i<trafficList.children.length; i++) {
-        if(e.target.textContent == trafficList.children[i].textContent) {
-            return i;
+$('#dropdown')[0].addEventListener('click', (e) => {
+    for(let i=0; i<noteMessages.children.length; i++) {
+        if(e.target.textContent == 'x') {
+            if(noteMessages.children[i].children[0].textContent == e.target.parentNode.children[0].textContent) {
+                console.log(i);
+                noteMessages.removeChild(noteMessages.children[i]);
+            }
         }
     }
-}
+});
+
+//Traffic Line Graph
+//Traffic Times
 trafficList.addEventListener('click', (e) => {
     for(let i=0; i<trafficList.children.length; i++) {
         trafficList.children[i].className = 'traffic-nav-link';
     }
-    trafficList.children[findIndex(e)].classList.add('active');
-    if(trafficList.children[findIndex(e)].textContent == 'Hourly') {
+    trafficList.children[findIndex(e, trafficList)].classList.add('active');
+    if(trafficList.children[findIndex(e, trafficList)].textContent == 'Hourly') {
         trafficData = {
             labels: ['1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
             datasets: [{
@@ -74,7 +86,7 @@ trafficList.addEventListener('click', (e) => {
             data: trafficData,
             options: trafficOptions
         });
-    }else if(trafficList.children[findIndex(e)].textContent == 'Daily') {
+    }else if(trafficList.children[findIndex(e, trafficList)].textContent == 'Daily') {
         trafficData = {
             labels: ['S', 'M', 'T', 'W', 'Th', 'F', 'S'],
             datasets: [{
@@ -100,7 +112,7 @@ trafficList.addEventListener('click', (e) => {
             data: trafficData,
             options: trafficOptions
         });
-    }else if(trafficList.children[findIndex(e)].textContent == 'Weekly'){
+    }else if(trafficList.children[findIndex(e, trafficList)].textContent == 'Weekly'){
         trafficData = {
             labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
             datasets: [{
@@ -126,7 +138,7 @@ trafficList.addEventListener('click', (e) => {
             data: trafficData,
             options: trafficOptions
         });
-    }else if(trafficList.children[findIndex(e)].textContent == 'Monthly') {
+    }else if(trafficList.children[findIndex(e, trafficList)].textContent == 'Monthly') {
         trafficData = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [{
