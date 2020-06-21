@@ -28,9 +28,9 @@
     .search-section {
         .search-area {
             .alert {
+                width: calc(100% - 3em);
                 .alert-banner {
                     margin-left: 2em;
-                    width: calc(100% - 4em);
                 }
             }
         }

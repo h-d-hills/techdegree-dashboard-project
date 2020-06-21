@@ -371,6 +371,8 @@ template {
   height: 2em;
   border-radius: 50%;
   margin-left: -1em;
+  opacity: 0;
+  transition: 0.4s;
 }
 .main-header .header-list .header-item li {
   text-align: center;
@@ -433,8 +435,11 @@ template {
   width: 50%;
   height: 2em;
 }
+.search-section .search-area .alert {
+  margin-left: 1em;
+  width: calc(100% - 2em);
+}
 .search-section .search-area .alert .alert-banner {
-  width: 100%;
   display: flex;
   padding: 0.125em 1em;
   color: white;
@@ -502,6 +507,7 @@ main .social .social-elements .social-container {
   width: calc(100vw - 4em);
 }
 main .social .social-elements .social-container .social-image {
+  margin: auto 0;
   width: 15vw;
   height: 15vw;
   background-color: #7477bf;
@@ -1431,9 +1437,11 @@ button {
     border-right: 1px solid black;
   }
 
+  .search-section .search-area .alert {
+    width: calc(100% - 3em);
+  }
   .search-section .search-area .alert .alert-banner {
     margin-left: 2em;
-    width: calc(100% - 4em);
   }
 
   .nav-list {

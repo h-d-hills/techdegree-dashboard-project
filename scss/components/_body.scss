@@ -32,6 +32,8 @@
                 height: 2em;
                 border-radius: 50%;
                 margin-left: -1em;
+                opacity: 0;
+                transition: .4s;
             }
             li{
                 text-align: center;
@@ -98,8 +100,9 @@
             }
         }
         .alert {
+            margin-left: 1em;
+            width: calc(100% - 2em);
             .alert-banner {
-                width: 100%;
                 display: flex;
                 padding: 0.125em 1em;
                 color: white;
@@ -169,6 +172,7 @@ main {
                 background-color: #eee;
                 width: calc(100vw - 4em);
                 .social-image {
+                    margin: auto 0;
                     width: 15vw;
                     height: 15vw;
                     background-color: $primary-color;

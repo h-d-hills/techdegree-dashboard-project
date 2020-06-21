@@ -5,18 +5,26 @@ const mobileCanvas = document.getElementById('mobile-chart');
 const user = document.getElementById('userfield');
 const message = document.getElementById('messagefield');
 const send = document.getElementById('send');
+const noteDot = document.getElementById('notifications');
+const noteBell = document.getElementById('not-bell').parentNode;
 
 //Alert Banner
 alertBanner.innerHTML = 
     `
-    <div class='alert-banner'>
+    <div class='alert-banner' id='alert-banner'>
         <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-        <p class='alert-banner-close'>x</p>
+        <p class='alert-banner-close' id='banner-close'>x</p>
     </div>
     `;
 
 $('.alert-banner-close').click(function() {
     $('.alert-banner').slideUp();
+    noteDot.style.opacity = '1';
+});
+
+$(noteBell).click(function() {
+    $('.alert-banner').slideDown();
+    noteDot.style.opacity = '0';
 });
 
 //Traffic Line Graph
