@@ -1486,7 +1486,7 @@ button {
     width: auto;
   }
   .main-header .header-list .header-item {
-    margin: 0 -5em;
+    margin: 0 -7.5em;
     margin-right: 0;
   }
   .main-header .header-list .header-item:first-child li {
