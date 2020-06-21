@@ -1,3 +1,5 @@
+@import '../utility/variables';
+
 @mixin member-format {
     display: flex;
     padding: 1em 0;
@@ -14,6 +16,12 @@
         p {
             margin-bottom: 0.25em;
             margin-top: 0;
+            color: black;
+            font-weight: bold;
+            &:last-child {
+                font-weight: normal;
+                color: $grey;
+            }
         }
     }
     &:last-child {

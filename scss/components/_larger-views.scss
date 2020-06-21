@@ -24,6 +24,18 @@
         }
     }
 
+    //The Alert
+    .search-section {
+        .search-area {
+            .alert {
+                .alert-banner {
+                    margin-left: 2em;
+                    width: calc(100% - 4em);
+                }
+            }
+        }
+    }
+
     //The Nav
     .nav-list {
         flex-direction: column;
@@ -51,7 +63,7 @@
                 display: flex;
                 .social-container {
                     width: calc(100% / 3);
-                    margin-right: 2em;
+                    margin-right: 1em;
                     .social-image {
                         width: 7.5vw;
                         height: 7.5vw;
@@ -63,7 +75,10 @@
         .messaging {
             .widget-container {
                 width: 100%;
-                padding-right: 1.5em;
+                .form-area,
+                .form-field {
+                    width: 100%;
+                }
             }
         }
         .settings {
@@ -106,8 +121,10 @@
         .settings,
         .daily,
         .mobile-users,
-        .traffic {
+        .traffic,
+        .messaging {
             padding-right: 1.5em;
+            width: 100%;
         }
     }
 

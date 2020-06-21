@@ -340,6 +340,7 @@ template {
 
 * {
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
 }
 
 .main-header {
@@ -364,6 +365,13 @@ template {
 .main-header .header-list .header-item {
   margin: auto;
 }
+.main-header .header-list .header-item #notifications {
+  background-color: #88cc95;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin-left: -1em;
+}
 .main-header .header-list .header-item li {
   text-align: center;
   transform: scale(0.5);
@@ -378,6 +386,7 @@ template {
   margin-right: 1em;
 }
 .main-header .header-list .header-item li:last-child h3 {
+  font-weight: lighter;
   margin: auto 0;
   color: white;
   font-size: 2em;
@@ -404,6 +413,7 @@ template {
   display: flex;
 }
 .search-section .search-area .search-div h2 {
+  color: #555;
   padding-left: 2em;
   margin-right: 2em;
 }
@@ -424,8 +434,7 @@ template {
   height: 2em;
 }
 .search-section .search-area .alert .alert-banner {
-  margin-left: 2em;
-  width: calc(100% - 4em);
+  width: 100%;
   display: flex;
   padding: 0.125em 1em;
   color: white;
@@ -435,8 +444,12 @@ template {
   margin: auto;
   margin-right: 0;
   cursor: pointer;
+  font-weight: 800;
 }
 
+main {
+  color: #555;
+}
 main .traffic {
   padding: 2em;
 }
@@ -450,7 +463,6 @@ main .traffic .traffic-header .traffic-nav {
   list-style: none;
 }
 main .traffic .traffic-header .traffic-nav li {
-  margin-right: 1em;
   color: black;
   padding: 0.5em 1em;
   border-radius: 2em;
@@ -478,6 +490,8 @@ main .settings {
 }
 main .social {
   padding: 0 2em;
+  padding-right: 0;
+  padding-left: 1.5em;
 }
 main .social .social-elements .social-container {
   display: flex;
@@ -514,7 +528,7 @@ main .social .social-elements .social-container .social-text p:first-child {
 }
 main .social .social-elements .social-container .social-text p:last-child {
   font-size: 4em;
-  font-weight: lighter;
+  font-weight: 100;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -546,6 +560,12 @@ main .new-members .member-container .member-text {
 main .new-members .member-container .member-text p {
   margin-bottom: 0.25em;
   margin-top: 0;
+  color: black;
+  font-weight: bold;
+}
+main .new-members .member-container .member-text p:last-child {
+  font-weight: normal;
+  color: #555;
 }
 main .new-members .member-container:last-child {
   border-bottom: 0;
@@ -582,6 +602,12 @@ main .recent-activity .member-container .member-text {
 main .recent-activity .member-container .member-text p {
   margin-bottom: 0.25em;
   margin-top: 0;
+  color: black;
+  font-weight: bold;
+}
+main .recent-activity .member-container .member-text p:last-child {
+  font-weight: normal;
+  color: #555;
 }
 main .recent-activity .member-container:last-child {
   border-bottom: 0;
@@ -665,28 +691,16 @@ main .settings .settings-buttons button:first-child {
 }
 main .settings .settings-buttons button:last-child {
   color: white;
-  background-color: #ccc;
+  background-color: #bbb;
 }
 main .traffic,
 main .daily,
 main .mobile-users,
-main .social,
 main .new-members,
 main .recent-activity,
 main .messaging,
 main .settings {
-  padding-right: 0;
-  padding-left: 1.5em;
-}
-main .traffic,
-main .daily,
-main .mobile-users {
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-}
-
-canvas[class^=widget-container] {
-  width: calc(90vw - 4em);
+  width: calc(100vw - 2em);
 }
 
 .grid-container {
@@ -707,6 +721,11 @@ canvas[class^=widget-container] {
 }
 .grid-container .search-area {
   grid-area: search;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /*
@@ -1412,6 +1431,11 @@ canvas[class^=widget-container] {
     border-right: 1px solid black;
   }
 
+  .search-section .search-area .alert .alert-banner {
+    margin-left: 2em;
+    width: calc(100% - 4em);
+  }
+
   .nav-list {
     flex-direction: column;
     align-content: center;
@@ -1436,7 +1460,7 @@ main .mobile-users {
   }
   main .social .social-elements .social-container {
     width: calc(100% / 3);
-    margin-right: 2em;
+    margin-right: 1em;
   }
   main .social .social-elements .social-container .social-image {
     width: 7.5vw;
@@ -1445,7 +1469,10 @@ main .mobile-users {
   }
   main .messaging .widget-container {
     width: 100%;
-    padding-right: 1.5em;
+  }
+  main .messaging .widget-container .form-area,
+main .messaging .widget-container .form-field {
+    width: 100%;
   }
   main .settings .form-field {
     width: 100%;
@@ -1479,8 +1506,10 @@ main .recent-activity,
 main .settings,
 main .daily,
 main .mobile-users,
-main .traffic {
+main .traffic,
+main .messaging {
     padding-right: 1.5em;
+    width: 100%;
   }
 
   .widget-container-full {
