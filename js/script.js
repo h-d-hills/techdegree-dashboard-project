@@ -9,6 +9,7 @@ const noteDot = document.getElementById('notifications');
 const noteBell = document.getElementById('not-bell').parentNode;
 const trafficList = document.getElementsByClassName('traffic-nav')[0];
 const noteMessages = $('#dropdown')[0];
+let noneLeft = false;
 function findIndex(e, list) {
     for(let i=0; i<list.children.length; i++) {
         if(e.target.textContent == list.children[i].textContent) {
@@ -38,7 +39,9 @@ $(noteBell).click(function() {
         noteDot.style.opacity = '0';
     }else{
         $('#dropdown').slideUp();
-        noteDot.style.opacity = '1';
+        if(!noneLeft){
+            noteDot.style.opacity = '1';
+        }
     }
 });
 
@@ -46,8 +49,16 @@ $('#dropdown')[0].addEventListener('click', (e) => {
     for(let i=0; i<noteMessages.children.length; i++) {
         if(e.target.textContent == 'x') {
             if(noteMessages.children[i].children[0].textContent == e.target.parentNode.children[0].textContent) {
-                console.log(i);
                 noteMessages.removeChild(noteMessages.children[i]);
+            }
+            if(noteMessages.children.length == 0) {
+                const newLink = document.createElement('a');
+                const newDiv = document.createElement('div');
+                newLink.appendChild(newDiv);
+                newDiv.className = 'note-message';
+                newDiv.textContent = 'No messages to display';
+                noteMessages.appendChild(newLink);
+                noneLeft = true;
             }
         }
     }

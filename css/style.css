@@ -404,7 +404,13 @@ template {
   text-decoration: none;
   color: black;
   display: flex;
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
   cursor: default;
+}
+.main-header .header-list .header-item li .dropdown-content a:last-child {
+  border: none;
+  padding: 0;
 }
 .main-header .header-list .header-item li .dropdown-content a .note-message {
   text-align: left;
@@ -517,6 +523,7 @@ main .traffic .traffic-header .traffic-nav .active {
   color: white;
 }
 main .traffic .traffic-header .traffic-nav li {
+  cursor: pointer;
   color: black;
   padding: 0.5em 1em;
   border-radius: 2em;

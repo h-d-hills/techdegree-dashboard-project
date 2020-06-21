@@ -63,7 +63,13 @@
                         text-decoration: none;
                         color: black;
                         display: flex;
+                        padding-bottom: 1em;
+                        border-bottom: 1px solid black;
                         cursor: default;
+                        &:last-child {
+                            border: none;
+                            padding: 0;
+                        }
                         .note-message {
                             text-align: left;
                         }
@@ -180,6 +186,7 @@ main {
                     color: white;
                 }
                 li {
+                    cursor: pointer;
                     color: black;
                     padding: .5em 1em;
                     border-radius: 2em;
