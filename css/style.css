@@ -379,6 +379,12 @@ template {
   transform: scale(0.5);
   width: 100%;
 }
+.main-header .header-list .header-item li svg {
+  transition: 0.4s;
+}
+.main-header .header-list .header-item li svg:hover {
+  transform: scale(1.1) rotate(5deg);
+}
 .main-header .header-list .header-item li:last-child {
   text-align: center;
   display: flex;
@@ -521,11 +527,15 @@ main .social .social-elements .social-container .social-image {
   grid-template-columns: auto;
   grid-template-areas: "image";
 }
-main .social .social-elements .social-container .social-image img {
+main .social .social-elements .social-container .social-image svg {
+  display: block;
   grid-area: image;
-  width: 50%;
+  width: 60%;
   display: block;
   margin: auto;
+}
+main .social .social-elements .social-container .social-image svg path {
+  margin: 0 auto;
 }
 main .social .social-elements .social-container .social-text {
   margin: auto 0;
