@@ -290,6 +290,7 @@ main {
             margin: auto 0;
             .member-text {
                 margin-left: 0;
+                margin-bottom: 1em;
             }
             .date {
                 margin-left: 0;
@@ -305,6 +306,10 @@ main {
         border-bottom: 1px solid black;
         .member-container {
             @include member-format;
+            .member-text {
+                margin: auto 0;
+                padding-left: 1em;
+            }
             .date {
                 transform: scaleY(2);
             }

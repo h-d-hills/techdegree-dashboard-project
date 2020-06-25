@@ -620,6 +620,7 @@ main .new-members .post-image {
 }
 main .new-members .post-image .member-text {
   margin-left: 0;
+  margin-bottom: 1em;
 }
 main .new-members .post-image .date {
   margin-left: 0;
@@ -629,7 +630,6 @@ main .new-members .member-container {
   padding: 1em 0;
   border-bottom: 1px solid black;
   width: calc(95vw - 4em);
-  height: 120px;
 }
 main .new-members .member-container img {
   border-radius: 50%;
@@ -668,7 +668,6 @@ main .recent-activity .member-container {
   padding: 1em 0;
   border-bottom: 1px solid black;
   width: calc(95vw - 4em);
-  height: 120px;
 }
 main .recent-activity .member-container img {
   border-radius: 50%;
@@ -696,6 +695,10 @@ main .recent-activity .member-container .date {
   main .recent-activity .member-container {
     width: 100%;
   }
+}
+main .recent-activity .member-container .member-text {
+  margin: auto 0;
+  padding-left: 1em;
 }
 main .recent-activity .member-container .date {
   transform: scaleY(2);
