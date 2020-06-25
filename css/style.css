@@ -614,6 +614,15 @@ main .new-members {
 main .new-members .post-image {
   display: flex;
   width: 100%;
+  flex-direction: column;
+  padding-left: 1em;
+  margin: auto 0;
+}
+main .new-members .post-image .member-text {
+  margin-left: 0;
+}
+main .new-members .post-image .date {
+  margin-left: 0;
 }
 main .new-members .member-container {
   display: flex;
@@ -626,9 +635,6 @@ main .new-members .member-container img {
   border-radius: 50%;
   width: 87px;
   height: 87px;
-}
-main .new-members .member-container .member-text {
-  margin: auto 0.25em auto 1em;
 }
 main .new-members .member-container .member-text p {
   margin-bottom: 0.25em;
@@ -644,7 +650,7 @@ main .new-members .member-container:last-child {
   border-bottom: 0;
 }
 main .new-members .member-container .date {
-  margin: auto;
+  margin: auto 0;
   margin-right: 0;
 }
 @media (min-width: 768px) {
@@ -669,9 +675,6 @@ main .recent-activity .member-container img {
   width: 87px;
   height: 87px;
 }
-main .recent-activity .member-container .member-text {
-  margin: auto 0.25em auto 1em;
-}
 main .recent-activity .member-container .member-text p {
   margin-bottom: 0.25em;
   margin-top: 0;
@@ -686,7 +689,7 @@ main .recent-activity .member-container:last-child {
   border-bottom: 0;
 }
 main .recent-activity .member-container .date {
-  margin: auto;
+  margin: auto 0;
   margin-right: 0;
 }
 @media (min-width: 768px) {

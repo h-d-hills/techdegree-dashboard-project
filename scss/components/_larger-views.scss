@@ -102,11 +102,11 @@
                 .post-image {
                     flex-direction: column;
                     padding-left: 1em;
+                    margin: auto 0;
                     .member-text {
                         margin-bottom: 1em;
                         margin-left: 0em;
                     }
-                    margin: auto 0;
                     &:last-child {
                         margin-left: 0;
                     }
