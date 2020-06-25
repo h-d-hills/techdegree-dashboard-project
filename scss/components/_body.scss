@@ -180,21 +180,27 @@ main {
         padding-right: 0;
         .traffic-header {
             display: flex;
+            flex-direction: column;
             .traffic-nav {
+                padding-left: 0;
                 margin: auto;
                 margin-right: 0;
                 display: flex;
                 list-style: none;
+                margin-left: 0;
                 .active {
                     background-color: $green-blue;
                     color: white;
                 }
                 li {
                     cursor: pointer;
+                    width: 25%;
                     color: black;
                     padding: .5em 1em;
                     border-radius: 2em;
                     background-color: white;
+                    align-content: center;
+                    font-size: .75em;
                     &:last-child {
                         margin-right: 0;
                     }

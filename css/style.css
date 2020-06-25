@@ -515,12 +515,15 @@ main .traffic {
 }
 main .traffic .traffic-header {
   display: flex;
+  flex-direction: column;
 }
 main .traffic .traffic-header .traffic-nav {
+  padding-left: 0;
   margin: auto;
   margin-right: 0;
   display: flex;
   list-style: none;
+  margin-left: 0;
 }
 main .traffic .traffic-header .traffic-nav .active {
   background-color: #88cc95;
@@ -528,10 +531,13 @@ main .traffic .traffic-header .traffic-nav .active {
 }
 main .traffic .traffic-header .traffic-nav li {
   cursor: pointer;
+  width: 25%;
   color: black;
   padding: 0.5em 1em;
   border-radius: 2em;
   background-color: white;
+  align-content: center;
+  font-size: 0.75em;
 }
 main .traffic .traffic-header .traffic-nav li:last-child {
   margin-right: 0;
