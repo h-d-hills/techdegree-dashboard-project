@@ -312,6 +312,11 @@ main {
             .member-text {
                 margin: auto 0;
                 padding-left: 1em;
+                p {
+                    &:first-child {
+                        margin-bottom: 0.5em;
+                    }
+                }
             }
             .date {
                 transform: scaleY(2);
