@@ -133,8 +133,8 @@
             display: flex;
             h2 {
                 color: $grey;
-                padding-left: 2em;
-                margin-right: 2em;
+                padding-left: 0.75em;
+                margin-right: 0.5em;
             }
             .search-bar {
                 margin: auto 0;
@@ -146,9 +146,9 @@
                 border-left: 1px solid black;
                 border-bottom: 1px solid black;
                 input {
-                    margin-left: 50%;
+                    margin-left: 25%;
                     border-radius: .25em;
-                    width: 50%;
+                    width: 75%;
                     height: 2em;
                 }
             }
@@ -253,8 +253,11 @@ main {
                         display: block;
                         grid-area: image;
                         width: 60%;
-                        display: block;
                         margin: auto;
+                        align-content: center;
+                        path {
+                            padding-right: 3em;
+                        }
                     }
                 }
                 .social-text {

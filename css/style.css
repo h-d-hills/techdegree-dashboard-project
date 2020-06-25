@@ -470,8 +470,8 @@ template {
 }
 .search-section .search-area .search-div h2 {
   color: #555;
-  padding-left: 2em;
-  margin-right: 2em;
+  padding-left: 0.75em;
+  margin-right: 0.5em;
 }
 .search-section .search-area .search-div .search-bar {
   margin: auto 0;
@@ -484,9 +484,9 @@ template {
   border-bottom: 1px solid black;
 }
 .search-section .search-area .search-div .search-bar input {
-  margin-left: 50%;
+  margin-left: 25%;
   border-radius: 0.25em;
-  width: 50%;
+  width: 75%;
   height: 2em;
 }
 .search-section .search-area .alert {
@@ -587,8 +587,11 @@ main .social .social-elements .social-container .social-image svg {
   display: block;
   grid-area: image;
   width: 60%;
-  display: block;
   margin: auto;
+  align-content: center;
+}
+main .social .social-elements .social-container .social-image svg path {
+  padding-right: 3em;
 }
 main .social .social-elements .social-container .social-text {
   margin: auto 0;
