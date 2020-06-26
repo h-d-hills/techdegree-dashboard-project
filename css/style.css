@@ -368,6 +368,9 @@ template {
 .main-header .header-list .header-item {
   margin: auto;
 }
+.main-header .header-list .header-item:last-child {
+  width: 50%;
+}
 .main-header .header-list .header-item #notifications {
   background-color: #88cc95;
   width: 2em;
@@ -499,6 +502,9 @@ template {
   color: white;
   background-color: #7477bf;
 }
+.search-section .search-area .alert .alert-banner p {
+  margin-right: 1em;
+}
 .search-section .search-area .alert .alert-banner .alert-banner-close {
   margin: auto;
   margin-right: 0;
@@ -544,25 +550,22 @@ main .traffic .traffic-header .traffic-nav li:last-child {
 }
 main .daily,
 main .messaging {
-  border: 1px solid black;
-  border-right: 0;
-  border-left: 0;
+  border-top: 1px solid black;
   padding: 0 2em;
-  padding-bottom: 1em;
-  padding-right: 0;
+}
+main .daily {
+  border-bottom: 1px solid black;
 }
 main .mobile-users,
 main .settings {
-  padding-left: 2em;
+  padding: 0 1em;
   padding-bottom: 1em;
   border-top: 0;
   border-bottom: 1px solid black;
-  padding-right: 2em;
 }
 main .social {
-  padding: 0 2em;
   padding-right: 0;
-  padding-left: 1.5em;
+  padding-left: 2em;
 }
 main .social .social-elements .social-container {
   display: flex;
@@ -609,60 +612,61 @@ main .social .social-elements .social-container .social-text p:last-child {
   margin-top: 0;
 }
 main .new-members {
-  padding-left: 2em;
+  padding: 0 1em;
   border: 1px solid black;
   border-right: 0;
   border-left: 0;
 }
-main .new-members .post-image {
+main .member-container {
+  display: flex;
+  padding: 1em 0;
+  border-bottom: 1px solid black;
+  width: calc(95vw - 4em);
+  margin: 0 auto;
+}
+main .member-container img {
+  border-radius: 50%;
+  width: 87px;
+  height: 87px;
+}
+main .member-container .member-text p {
+  margin-bottom: 0.25em;
+  margin-top: 0;
+  color: black;
+  font-weight: bold;
+}
+main .member-container .member-text p:last-child {
+  font-weight: normal;
+  color: #555;
+}
+main .member-container:last-child {
+  border-bottom: 0;
+}
+main .member-container .date {
+  margin: auto;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  main .member-container {
+    width: 100%;
+  }
+}
+main .post-image {
   display: flex;
   width: 100%;
   flex-direction: column;
   padding-left: 1em;
   margin: auto 0;
 }
-main .new-members .post-image .member-text {
+main .post-image .member-text {
   margin-left: 0;
   margin-bottom: 1em;
 }
-main .new-members .post-image .date {
+main .post-image .date {
   margin-left: 0;
 }
-main .new-members .member-container {
-  display: flex;
-  padding: 1em 0;
-  border-bottom: 1px solid black;
-  width: calc(95vw - 4em);
-}
-main .new-members .member-container img {
-  border-radius: 50%;
-  width: 87px;
-  height: 87px;
-}
-main .new-members .member-container .member-text p {
-  margin-bottom: 0.25em;
-  margin-top: 0;
-  color: black;
-  font-weight: bold;
-}
-main .new-members .member-container .member-text p:last-child {
-  font-weight: normal;
-  color: #555;
-}
-main .new-members .member-container:last-child {
-  border-bottom: 0;
-}
-main .new-members .member-container .date {
-  margin: auto;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  main .new-members .member-container {
-    width: 100%;
-  }
-}
 main .recent-activity {
-  padding-left: 2em;
+  padding: 0 1em;
   border-top: 0;
   border-bottom: 1px solid black;
 }
@@ -671,6 +675,7 @@ main .recent-activity .member-container {
   padding: 1em 0;
   border-bottom: 1px solid black;
   width: calc(95vw - 4em);
+  margin: 0 auto;
 }
 main .recent-activity .member-container img {
   border-radius: 50%;
@@ -742,6 +747,7 @@ main .messaging .widget-container .button-primary {
 }
 main .settings {
   border-top: 0;
+  border-bottom: 0;
 }
 main .settings .switch-light {
   display: grid;
@@ -778,14 +784,17 @@ main .settings .settings-buttons button:last-child {
   color: white;
   background-color: #bbb;
 }
-main .traffic,
-main .daily,
-main .mobile-users,
-main .new-members,
-main .recent-activity,
-main .messaging,
-main .settings {
-  width: calc(100vw - 2em);
+main section {
+  width: 100%;
+}
+main section .section-container {
+  width: calc(100% - 2em);
+}
+main .new-members .section-container,
+main .recent-activity .section-container,
+main .settings .section-container,
+main .mobile-users .section-container {
+  margin: 0 auto;
 }
 
 .grid-container {
@@ -1642,6 +1651,7 @@ main .messaging {
 
   .messaging {
     grid-area: messaging;
+    border-bottom: 0;
   }
 
   .settings {
