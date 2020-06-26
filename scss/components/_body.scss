@@ -12,6 +12,7 @@
     align-content: center;
     padding-bottom: 0.125em;
     height: 8em;
+    margin: 0 auto;
     p {
         margin: auto;
         color: white;
@@ -401,7 +402,7 @@ main {
         }
     }
     section {
-        width: 100%;
+        width: calc(100vw - 1.5em);
         .section-container{
             width: calc(100% - 2em);
         }

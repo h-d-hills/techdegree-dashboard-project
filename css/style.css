@@ -348,6 +348,7 @@ template {
   align-content: center;
   padding-bottom: 0.125em;
   height: 8em;
+  margin: 0 auto;
 }
 .main-header p {
   margin: auto;
@@ -787,7 +788,7 @@ main .settings .settings-buttons button:last-child {
   background-color: #bbb;
 }
 main section {
-  width: 100%;
+  width: calc(100vw - 1.5em);
 }
 main section .section-container {
   width: calc(100% - 2em);
@@ -1661,6 +1662,10 @@ main .messaging {
 
   .settings {
     grid-area: settings;
+  }
+
+  .main-header {
+    grid-area: header;
   }
 
   .grid-container {

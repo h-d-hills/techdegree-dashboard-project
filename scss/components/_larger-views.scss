@@ -21,6 +21,7 @@
 
 //The Tablet View
 @media (min-width: 768px) {
+
     //The Header
     .main-header {
         display: flex;
@@ -190,6 +191,9 @@
     }
     .settings {
         grid-area: settings;
+    }
+    .main-header {
+        grid-area: header;
     }
     .grid-container {
         grid-template-columns: 10% 90%;
