@@ -36,6 +36,9 @@
             .header-item {
                 margin: 0 -7.5em;
                 margin-right: 0;
+                &:last-child {
+                    width: auto;
+                }
                 &:first-child {
                     li {
                         margin-right: 1.5em;

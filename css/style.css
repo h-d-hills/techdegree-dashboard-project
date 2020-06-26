@@ -649,6 +649,7 @@ main .member-container .date {
 @media (min-width: 768px) {
   main .member-container {
     width: 100%;
+    height: 8em;
   }
 }
 main .post-image {
@@ -702,6 +703,7 @@ main .recent-activity .member-container .date {
 @media (min-width: 768px) {
   main .recent-activity .member-container {
     width: 100%;
+    height: 8em;
   }
 }
 main .recent-activity .member-container .member-text {
@@ -1526,6 +1528,9 @@ button {
   .main-header .header-list .header-item {
     margin: 0 -7.5em;
     margin-right: 0;
+  }
+  .main-header .header-list .header-item:last-child {
+    width: auto;
   }
   .main-header .header-list .header-item:first-child li {
     margin-right: 1.5em;
